@@ -1,0 +1,5 @@
+﻿  APIWrapper.cpp
+  .NETFramework,Version=v4.5.AssemblyAttributes.cpp
+  APIWrapper.obj : /DEBUG:FASTLINK is not supported when managed code is present; restarting link with /DEBUG:FULL
+  APILibrary.vcxproj -> C:\Datar\Dev\C#\RSA_ConsoleAppy\APILibrary\Debug\APILibrary.dll
+  APILibrary.vcxproj -> C:\Datar\Dev\C#\RSA_ConsoleAppy\APILibrary\Debug\APILibrary.pdb (Partial PDB)

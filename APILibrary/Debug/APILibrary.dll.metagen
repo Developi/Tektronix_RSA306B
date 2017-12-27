@@ -1,0 +1,618 @@
+ImageRuntimeVersion: v4.0.30319
+Assembly APILibrary, Version=0.0.*, Culture=Invariant Language (Invariant Country): 
+	hash=SHA1, flags=PublicKey
+Assembly mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Class Tektronix.DPX_FrameBuffer: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    Int32 fftPerFrame : Public
+    Int64 fftCount : Public
+    Int64 frameCount : Public
+    Double timestamp : Public
+    Int32 acqDataStatus : Public
+    Double minSigDuration : Public
+    Boolean minSigDurOutOfRange : Public
+    Int32 spectrumBitmapWidth : Public
+    Int32 spectrumBitmapHeight : Public
+    Int32 spectrumBitmapSize : Public
+    Int32 spectrumTraceLength : Public
+    Int32 numSpectrumTraces : Public
+    Boolean spectrumEnabled : Public
+    Boolean spectrogramEnabled : Public
+    Single[] spectrumBitmap : Public
+    Single[][] spectrumTraces : Public
+    Int32 sogramBitmapWidth : Public
+    Int32 sogramBitmapHeight : Public
+    Int32 sogramBitmapSize : Public
+    Int32 sogramBitmapNumValidLines : Public
+    Byte[] sogramBitmap : Public
+    Double[] sogramBitmapTimestampArray : Public
+    Int16[] sogramBitmapContainTriggerArray : Public
+Class Tektronix.DPX_SettingsStruct: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    Boolean enableSpectrum : Public
+    Boolean enableSpectrogram : Public
+    Int32 bitmapWidth : Public
+    Int32 bitmapHeight : Public
+    Int32 traceLength : Public
+    Single decayFactor : Public
+    Double actualRBW : Public
+Class Tektronix.DPX_SogramSettingsStruct: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    Int32 bitmapWidth : Public
+    Int32 bitmapHeight : Public
+    Double sogramTraceLineTime : Public
+    Double sogramBitmapLineTime : Public
+Class Tektronix.DEVICE_INFO: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    System.String nomenclature : Public
+    System.String serialNum : Public
+    System.String apiVersion : Public
+    System.String fwVersion : Public
+    System.String fpgaVersion : Public
+    System.String hwVersion : Public
+Class Tektronix.IQBLK_ACQINFO: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    UInt64 sample0Timestamp : Public
+    UInt64 triggerSampleIndex : Public
+    UInt64 triggerTimestamp : Public
+    UInt32 acqStatus : Public
+Class Tektronix.POWER_INFO: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    Boolean externalPowerPresent : Public
+    Boolean batteryPresent : Public
+    Double batteryChargeLevel : Public
+    Boolean batteryCharging : Public
+    Boolean batteryOverTemperature : Public
+    Boolean batteryHardwareError : Public
+Class Tektronix.Cplx32: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    Single i : Public
+    Single q : Public
+Class Tektronix.CplxInt32: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    Int32 i : Public
+    Int32 q : Public
+Class Tektronix.CplxInt16: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    Int16 i : Public
+    Int16 q : Public
+Class Tektronix.IQSTRMFILEINFO: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    UInt64 numberSamples : Public
+    UInt64 sample0Timestamp : Public
+    UInt64 triggerSampleIndex : Public
+    UInt64 triggerTimestamp : Public
+    UInt32 acqStatus : Public
+    System.String[] filenames : Public
+Class Tektronix.IQSTRMIQINFO: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    UInt64 timestamp : Public
+    Int32 triggerCount : Public
+    Int32[] triggerIndices : Public
+    Double scaleFactor : Public
+    UInt32 acqStatus : Public
+Class Tektronix.Spectrum_Limits: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    Double maxSpan : Public
+    Double minSpan : Public
+    Double maxRBW : Public
+    Double minRBW : Public
+    Double maxVBW : Public
+    Double minVBW : Public
+    Int32 maxTraceLength : Public
+    Int32 minTraceLength : Public
+Class Tektronix.Spectrum_Settings: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    Double span : Public
+    Double rbw : Public
+    Boolean enableVBW : Public
+    Double vbw : Public
+    Int32 traceLength : Public
+    Tektronix.SpectrumWindows window : Public
+    Tektronix.SpectrumVerticalUnits verticalUnit : Public
+    Double actualStartFreq : Public
+    Double actualStopFreq : Public
+    Double actualFreqStepSize : Public
+    Double actualRBW : Public
+    Double actualVBW : Public
+    Int32 actualNumIQSamples : Public
+Class Tektronix.Spectrum_TraceInfo: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    UInt64 timestamp : Public
+    UInt16 acqDataStatus : Public
+Class Tektronix.FREQREF_USER_INFO: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    Boolean isvalid : Public
+    UInt32 dacValue : Public
+    System.String datetime : Public
+    Double temperature : Public
+Class Tektronix.APIWrapper: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    System.IDisposable
+  Methods:
+    CONFIG_SetEnableGnssTimeRefAlign(Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig
+    CONFIG_GetEnableGnssTimeRefAlign(Boolean&): PrivateScope, Public, HideBySig
+    CONFIG_GetStatusGnssTimeRefAlign(Boolean&): PrivateScope, Public, HideBySig
+    CONFIG_SetFreqRefUserSetting(String): PrivateScope, Public, HideBySig
+    CONFIG_GetFreqRefUserSetting(String&): PrivateScope, Public, HideBySig
+    Dispose(): PrivateScope, Public, Final, Virtual, HideBySig
+    IFSTREAM_GetActiveStatus(Boolean&): PrivateScope, Public, HideBySig
+    IFSTREAM_SetDiskFileCount(Int32): PrivateScope, Public, HideBySig
+    IFSTREAM_SetDiskFileLength(Int32): PrivateScope, Public, HideBySig
+    IFSTREAM_SetDiskFileMode(StreamingMode): PrivateScope, Public, HideBySig
+    IFSTREAM_SetDiskFilenameBase(String): PrivateScope, Public, HideBySig
+    IFSTREAM_SetDiskFilePath(String): PrivateScope, Public, HideBySig
+    IFSTREAM_SetEnable(Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig
+    IQBLK_GetIQAcqInfo(IQBLK_ACQINFO&): PrivateScope, Public, HideBySig
+    IQBLK_AcquireIQData(): PrivateScope, Public, HideBySig
+    IQBLK_GetIQBandwidth(Double&): PrivateScope, Public, HideBySig
+    IQBLK_GetIQData(Single[]&, Int32&, Int32): PrivateScope, Public, HideBySig
+    IQBLK_GetIQDataCplx(Cplx32[]&, Int32&, Int32): PrivateScope, Public, HideBySig
+    IQBLK_GetIQDataDeinterleaved(Single[]&, Single[]&, Int32&, Int32): PrivateScope, Public, HideBySig
+    IQBLK_GetIQRecordLength(Int32&): PrivateScope, Public, HideBySig
+    IQBLK_GetIQSampleRate(Double&): PrivateScope, Public, HideBySig
+    IQBLK_GetMaxIQBandwidth(Double&): PrivateScope, Public, HideBySig
+    IQBLK_GetMaxIQRecordLength(Int32&): PrivateScope, Public, HideBySig
+    IQBLK_GetMinIQBandwidth(Double&): PrivateScope, Public, HideBySig
+    IQBLK_SetIQBandwidth(Double): PrivateScope, Public, HideBySig
+    IQBLK_SetIQRecordLength(Int32): PrivateScope, Public, HideBySig
+    IQBLK_WaitForIQDataReady(Int32, Boolean&): PrivateScope, Public, HideBySig
+    IQSTREAM_GetMaxAcqBandwidth(Double&): PrivateScope, Public, HideBySig
+    IQSTREAM_GetMinAcqBandwidth(Double&): PrivateScope, Public, HideBySig
+    IQSTREAM_ClearAcqStatus(): PrivateScope, Public, HideBySig
+    IQSTREAM_GetAcqParameters(Double&, Double&): PrivateScope, Public, HideBySig
+    IQSTREAM_GetDiskFileInfo(IQSTRMFILEINFO&): PrivateScope, Public, HideBySig
+    IQSTREAM_GetDiskFileWriteStatus(Boolean&, Boolean&): PrivateScope, Public, HideBySig
+    IQSTREAM_GetEnable(Boolean&): PrivateScope, Public, HideBySig
+    IQSTREAM_GetIQData(Object&, Int32&, IQSTRMIQINFO&): PrivateScope, Public, HideBySig
+    IQSTREAM_GetIQDataBufferSize(Int32&): PrivateScope, Public, HideBySig
+    IQSTREAM_SetAcqBandwidth(Double): PrivateScope, Public, HideBySig
+    IQSTREAM_SetDiskFileLength(Int32): PrivateScope, Public, HideBySig
+    IQSTREAM_SetDiskFilenameBase(String): PrivateScope, Public, HideBySig
+    IQSTREAM_SetDiskFilenameBaseW(String): PrivateScope, Public, HideBySig
+    IQSTREAM_SetDiskFilenameSuffix(IQSSDFN_SUFFIX): PrivateScope, Public, HideBySig
+    IQSTREAM_SetIQDataBufferSize(Int32): PrivateScope, Public, HideBySig
+    IQSTREAM_SetOutputConfiguration(IQSOUTDEST, IQSOUTDTYPE): PrivateScope, Public, HideBySig
+    IQSTREAM_Start(): PrivateScope, Public, HideBySig
+    IQSTREAM_Stop(): PrivateScope, Public, HideBySig
+    PLAYBACK_OpenDiskFile(String, Int32, Int32, Double, Boolean(HasFieldMarshal), Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig
+    PLAYBACK_GetReplayComplete(Boolean&): PrivateScope, Public, HideBySig
+    POWER_GetStatus(POWER_INFO&): PrivateScope, Public, HideBySig
+    SPECTRUM_AcquireTrace(): PrivateScope, Public, HideBySig
+    SPECTRUM_GetEnable(Boolean&): PrivateScope, Public, HideBySig
+    SPECTRUM_GetLimits(Spectrum_Limits&): PrivateScope, Public, HideBySig
+    SPECTRUM_GetSettings(Spectrum_Settings&): PrivateScope, Public, HideBySig
+    SPECTRUM_GetTrace(SpectrumTraces, Int32, Single[]&, Int32&): PrivateScope, Public, HideBySig
+    SPECTRUM_GetTraceInfo(Spectrum_TraceInfo&): PrivateScope, Public, HideBySig
+    SPECTRUM_GetTraceType(SpectrumTraces, Boolean&, SpectrumDetectors&): PrivateScope, Public, HideBySig
+    SPECTRUM_SetDefault(): PrivateScope, Public, HideBySig
+    SPECTRUM_SetEnable(Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig
+    SPECTRUM_SetSettings(Spectrum_Settings): PrivateScope, Public, HideBySig
+    SPECTRUM_SetTraceType(SpectrumTraces, Boolean(HasFieldMarshal), SpectrumDetectors): PrivateScope, Public, HideBySig
+    SPECTRUM_WaitForTraceReady(Int32, Boolean&): PrivateScope, Public, HideBySig
+    REFTIME_SetReferenceTime(Int64, UInt64, UInt64): PrivateScope, Public, HideBySig
+    REFTIME_GetReferenceTime(Int64&, UInt64&, UInt64&): PrivateScope, Public, HideBySig
+    REFTIME_GetCurrentTime(Int64&, UInt64&, UInt64&): PrivateScope, Public, HideBySig
+    REFTIME_GetIntervalSinceRefTimeSet(Double&): PrivateScope, Public, HideBySig
+    REFTIME_GetTimeFromTimestamp(UInt64, Int64&, UInt64&): PrivateScope, Public, HideBySig
+    REFTIME_GetTimestampFromTime(Int64, UInt64, UInt64&): PrivateScope, Public, HideBySig
+    REFTIME_GetTimestampRate(UInt64&): PrivateScope, Public, HideBySig
+    TRKGEN_GetEnable(Boolean&): PrivateScope, Public, HideBySig
+    TRKGEN_GetHwInstalled(Boolean&): PrivateScope, Public, HideBySig
+    TRKGEN_GetOutputLevel(Double&): PrivateScope, Public, HideBySig
+    TRKGEN_SetEnable(Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig
+    TRKGEN_SetOutputLevel(Double): PrivateScope, Public, HideBySig
+    TRIG_ForceTrigger(): PrivateScope, Public, HideBySig
+    TRIG_GetIFPowerTriggerLevel(Double&): PrivateScope, Public, HideBySig
+    TRIG_GetTriggerMode(TriggerMode&): PrivateScope, Public, HideBySig
+    TRIG_GetTriggerPositionPercent(Double&): PrivateScope, Public, HideBySig
+    TRIG_GetTriggerSource(TriggerSource&): PrivateScope, Public, HideBySig
+    TRIG_GetTriggerTransition(TriggerTransition&): PrivateScope, Public, HideBySig
+    TRIG_SetIFPowerTriggerLevel(Double): PrivateScope, Public, HideBySig
+    TRIG_SetTriggerMode(TriggerMode): PrivateScope, Public, HideBySig
+    TRIG_SetTriggerPositionPercent(Double): PrivateScope, Public, HideBySig
+    TRIG_SetTriggerSource(TriggerSource): PrivateScope, Public, HideBySig
+    TRIG_SetTriggerTransition(TriggerTransition): PrivateScope, Public, HideBySig
+    CONFIG_DecodeFreqRefUserSettingString(String, FREQREF_USER_INFO&): PrivateScope, Public, HideBySig
+    GNSS_GetStatusRxLock(Boolean&): PrivateScope, Public, HideBySig
+    REFTIME_GetReferenceTimeSource(REFTIME_SRC&): PrivateScope, Public, HideBySig
+    CONFIG_SetFrequencyReferenceSource(FREQREF_SOURCE): PrivateScope, Public, HideBySig
+    CONFIG_GetFrequencyReferenceSource(FREQREF_SOURCE&): PrivateScope, Public, HideBySig
+    CONFIG_SetModeGnssFreqRefCorrection(GFR_MODE): PrivateScope, Public, HideBySig
+    CONFIG_GetModeGnssFreqRefCorrection(GFR_MODE&): PrivateScope, Public, HideBySig
+    CONFIG_GetStatusGnssFreqRefCorrection(GFR_STATE&, GFR_QUALITY&): PrivateScope, Public, HideBySig
+    ALIGN_GetAlignmentNeeded(Boolean&): PrivateScope, Public, HideBySig
+    ALIGN_GetWarmupStatus(Boolean&): PrivateScope, Public, HideBySig
+    ALIGN_RunAlignment(): PrivateScope, Public, HideBySig
+    AUDIO_SetFrequencyOffset(Double): PrivateScope, Public, HideBySig
+    AUDIO_GetFrequencyOffset(Double&): PrivateScope, Public, HideBySig
+    AUDIO_GetEnable(Boolean&): PrivateScope, Public, HideBySig
+    AUDIO_GetData(Int16&, Int16, UInt16&): PrivateScope, Public, HideBySig
+    AUDIO_GetMode(AudioDemodMode&): PrivateScope, Public, HideBySig
+    AUDIO_GetMute(Boolean&): PrivateScope, Public, HideBySig
+    AUDIO_GetVolume(Single&): PrivateScope, Public, HideBySig
+    AUDIO_SetMode(AudioDemodMode): PrivateScope, Public, HideBySig
+    AUDIO_SetMute(Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig
+    AUDIO_SetVolume(Single): PrivateScope, Public, HideBySig
+    AUDIO_Start(): PrivateScope, Public, HideBySig
+    AUDIO_Stop(): PrivateScope, Public, HideBySig
+    CONFIG_GetCenterFreq(Double&): PrivateScope, Public, HideBySig
+    CONFIG_GetExternalRefEnable(Boolean&): PrivateScope, Public, HideBySig
+    CONFIG_GetExternalRefFrequency(Double&): PrivateScope, Public, HideBySig
+    CONFIG_GetMaxCenterFreq(Double&): PrivateScope, Public, HideBySig
+    CONFIG_GetMinCenterFreq(Double&): PrivateScope, Public, HideBySig
+    CONFIG_GetReferenceLevel(Double&): PrivateScope, Public, HideBySig
+    CONFIG_Preset(): PrivateScope, Public, HideBySig
+    CONFIG_SetCenterFreq(Double): PrivateScope, Public, HideBySig
+    CONFIG_SetExternalRefEnable(Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig
+    CONFIG_SetReferenceLevel(Double): PrivateScope, Public, HideBySig
+    CONFIG_GetAutoAttenuationEnable(Boolean&): PrivateScope, Public, HideBySig
+    CONFIG_SetAutoAttenuationEnable(Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig
+    CONFIG_GetRFPreampEnable(Boolean&): PrivateScope, Public, HideBySig
+    CONFIG_SetRFPreampEnable(Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig
+    CONFIG_GetRFAttenuator(Double&): PrivateScope, Public, HideBySig
+    CONFIG_SetRFAttenuator(Double): PrivateScope, Public, HideBySig
+    DEVICE_GetErrorString(ReturnStatus): PrivateScope, Public, HideBySig
+    DEVICE_SearchIntW(Int32[]&, String[]&, String[]&): PrivateScope, Public, HideBySig
+    DEVICE_Search(Int32[]&, String[]&, String[]&): PrivateScope, Public, HideBySig
+    DEVICE_Connect(Int32): PrivateScope, Public, HideBySig
+    DEVICE_Disconnect(): PrivateScope, Public, HideBySig
+    DEVICE_GetEnable(Boolean&): PrivateScope, Public, HideBySig
+    DEVICE_GetFPGAVersion(String&): PrivateScope, Public, HideBySig
+    DEVICE_GetFWVersion(String&): PrivateScope, Public, HideBySig
+    DEVICE_GetHWVersion(String&): PrivateScope, Public, HideBySig
+    DEVICE_GetNomenclature(String&): PrivateScope, Public, HideBySig
+    DEVICE_GetSerialNumber(String&): PrivateScope, Public, HideBySig
+    DEVICE_GetAPIVersion(String&): PrivateScope, Public, HideBySig
+    DEVICE_PrepareForRun(): PrivateScope, Public, HideBySig
+    DEVICE_GetInfo(DEVICE_INFO&): PrivateScope, Public, HideBySig
+    DEVICE_GetOverTemperatureStatus(Boolean&): PrivateScope, Public, HideBySig
+    DEVICE_Reset(Int32): PrivateScope, Public, HideBySig
+    DEVICE_Run(): PrivateScope, Public, HideBySig
+    DEVICE_StartFrameTransfer(): PrivateScope, Public, HideBySig
+    DEVICE_Stop(): PrivateScope, Public, HideBySig
+    DEVICE_GetEventStatus(EventType, Boolean&, Int64&): PrivateScope, Public, HideBySig
+    DPX_FinishFrameBuffer(): PrivateScope, Public, HideBySig
+    DPX_WaitForDataReady(Int32, Boolean&): PrivateScope, Public, HideBySig
+    DPX_Configure(Boolean(HasFieldMarshal), Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig
+    DPX_GetEnable(Boolean&): PrivateScope, Public, HideBySig
+    DPX_GetRBWRange(Double, Double&, Double&): PrivateScope, Public, HideBySig
+    DPX_GetFrameInfo(Int64&, Int64&): PrivateScope, Public, HideBySig
+    DPX_GetFrameBuffer(DPX_FrameBuffer&): PrivateScope, Public, HideBySig
+    DPX_SetEnable(Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig
+    DPX_GetSettings(DPX_SettingsStruct&): PrivateScope, Public, HideBySig
+    DPX_Reset(): PrivateScope, Public, HideBySig
+    DPX_SetParameters(Double, Double, Int32, Int32, VerticalUnitType, Double, Double, Boolean(HasFieldMarshal), Double, Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig
+    DPX_SetSpectrumTraceType(Int32, TraceType): PrivateScope, Public, HideBySig
+    DPX_IsFrameBufferAvailable(Boolean&): PrivateScope, Public, HideBySig
+    DPX_GetSogramHiResLine(Int16&, Int32&, Int32, Double&, Int32, Int32): PrivateScope, Public, HideBySig
+    DPX_GetSogramHiResLineCountLatest(Int32&): PrivateScope, Public, HideBySig
+    DPX_GetSogramHiResLineTimeStamp(Double&, Int32): PrivateScope, Public, HideBySig
+    DPX_GetSogramHiResLineTriggered(Boolean&, Int32): PrivateScope, Public, HideBySig
+    DPX_GetSogramSettings(DPX_SogramSettingsStruct&): PrivateScope, Public, HideBySig
+    DPX_SetSogramParameters(Double, Double, Double, Double): PrivateScope, Public, HideBySig
+    DPX_SetSogramTraceType(TraceType): PrivateScope, Public, HideBySig
+    GNSS_ClearNavMessageData(): PrivateScope, Public, HideBySig
+    GNSS_Get1PPSTimestamp(Boolean&, UInt64&): PrivateScope, Public, HideBySig
+    GNSS_GetAntennaPower(Boolean&): PrivateScope, Public, HideBySig
+    GNSS_GetEnable(Boolean&): PrivateScope, Public, HideBySig
+    GNSS_GetHwInstalled(Boolean&): PrivateScope, Public, HideBySig
+    GNSS_GetNavMessageData(Int32&, String&): PrivateScope, Public, HideBySig
+    GNSS_GetSatSystem(Enum&): PrivateScope, Public, HideBySig
+    GNSS_SetAntennaPower(Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig
+    GNSS_SetEnable(Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig
+    GNSS_SetSatSystem(GNSS_SATSYS): PrivateScope, Public, HideBySig
+    IFSTREAM_SetDiskFilenameSuffix(Int32): PrivateScope, Public, HideBySig
+Struct Tektronix.EventType: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    Tektronix.EventType DEVEVENT_OVERRANGE = 0 : Public, Static, Literal, HasDefault
+    Tektronix.EventType DEVEVENT_TRIGGER = 1 : Public, Static, Literal, HasDefault
+    Tektronix.EventType DEVEVENT_1PPS = 2 : Public, Static, Literal, HasDefault
+Struct Tektronix.TraceType: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    Tektronix.TraceType TraceTypeAverage = 0 : Public, Static, Literal, HasDefault
+    Tektronix.TraceType TraceTypeMax = 1 : Public, Static, Literal, HasDefault
+    Tektronix.TraceType TraceTypeMaxHold = 2 : Public, Static, Literal, HasDefault
+    Tektronix.TraceType TraceTypeMin = 3 : Public, Static, Literal, HasDefault
+    Tektronix.TraceType TraceTypeMinHold = 4 : Public, Static, Literal, HasDefault
+Struct Tektronix.VerticalUnitType: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    Tektronix.VerticalUnitType VerticalUnit_dBm = 0 : Public, Static, Literal, HasDefault
+    Tektronix.VerticalUnitType VerticalUnit_Watt = 1 : Public, Static, Literal, HasDefault
+    Tektronix.VerticalUnitType VerticalUnit_Volt = 2 : Public, Static, Literal, HasDefault
+    Tektronix.VerticalUnitType VerticalUnit_Amp = 3 : Public, Static, Literal, HasDefault
+Struct Tektronix.AudioDemodMode: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    Tektronix.AudioDemodMode ADM_FM_8KHZ = 0 : Public, Static, Literal, HasDefault
+    Tektronix.AudioDemodMode ADM_FM_13KHZ = 1 : Public, Static, Literal, HasDefault
+    Tektronix.AudioDemodMode ADM_FM_75KHZ = 2 : Public, Static, Literal, HasDefault
+    Tektronix.AudioDemodMode ADM_FM_200KHZ = 3 : Public, Static, Literal, HasDefault
+    Tektronix.AudioDemodMode ADM_AM_8KHZ = 4 : Public, Static, Literal, HasDefault
+    Tektronix.AudioDemodMode ADM_NONE = 5 : Public, Static, Literal, HasDefault
+Struct Tektronix.GNSS_SATSYS: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    Tektronix.GNSS_SATSYS GNSS_NOSYS = 0 : Public, Static, Literal, HasDefault
+    Tektronix.GNSS_SATSYS GNSS_GPS_GLONASS = 1 : Public, Static, Literal, HasDefault
+    Tektronix.GNSS_SATSYS GNSS_GPS_BEIDOU = 2 : Public, Static, Literal, HasDefault
+    Tektronix.GNSS_SATSYS GNSS_GPS = 3 : Public, Static, Literal, HasDefault
+    Tektronix.GNSS_SATSYS GNSS_GLONASS = 4 : Public, Static, Literal, HasDefault
+    Tektronix.GNSS_SATSYS GNSS_BEIDOU = 5 : Public, Static, Literal, HasDefault
+Struct Tektronix.StreamingMode: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    Tektronix.StreamingMode StreamingModeRaw = 0 : Public, Static, Literal, HasDefault
+    Tektronix.StreamingMode StreamingModeFramed = 1 : Public, Static, Literal, HasDefault
+Struct Tektronix.IQSOUTDEST: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    Tektronix.IQSOUTDEST IQSOD_CLIENT = 0 : Public, Static, Literal, HasDefault
+    Tektronix.IQSOUTDEST IQSOD_FILE_TIQ = 1 : Public, Static, Literal, HasDefault
+    Tektronix.IQSOUTDEST IQSOD_FILE_SIQ = 2 : Public, Static, Literal, HasDefault
+    Tektronix.IQSOUTDEST IQSOD_FILE_SIQ_SPLIT = 3 : Public, Static, Literal, HasDefault
+Struct Tektronix.IQSOUTDTYPE: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    Tektronix.IQSOUTDTYPE IQSODT_SINGLE = 0 : Public, Static, Literal, HasDefault
+    Tektronix.IQSOUTDTYPE IQSODT_INT32 = 1 : Public, Static, Literal, HasDefault
+    Tektronix.IQSOUTDTYPE IQSODT_INT16 = 2 : Public, Static, Literal, HasDefault
+Struct Tektronix.IQSSDFN_SUFFIX: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    Tektronix.IQSSDFN_SUFFIX IQSSDFN_SUFFIX_INCRINDEX_MIN = 0 : Public, Static, Literal, HasDefault
+    Tektronix.IQSSDFN_SUFFIX IQSSDFN_SUFFIX_TIMESTAMP = -1 : Public, Static, Literal, HasDefault
+    Tektronix.IQSSDFN_SUFFIX IQSSDFN_SUFFIX_NONE = -2 : Public, Static, Literal, HasDefault
+Struct Tektronix.SpectrumWindows: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    Tektronix.SpectrumWindows SpectrumWindow_Kaiser = 0 : Public, Static, Literal, HasDefault
+    Tektronix.SpectrumWindows SpectrumWindow_Mil6dB = 1 : Public, Static, Literal, HasDefault
+    Tektronix.SpectrumWindows SpectrumWindow_BlackmanHarris = 2 : Public, Static, Literal, HasDefault
+    Tektronix.SpectrumWindows SpectrumWindow_Rectangle = 3 : Public, Static, Literal, HasDefault
+    Tektronix.SpectrumWindows SpectrumWindow_FlatTop = 4 : Public, Static, Literal, HasDefault
+    Tektronix.SpectrumWindows SpectrumWindow_Hann = 5 : Public, Static, Literal, HasDefault
+Struct Tektronix.SpectrumTraces: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    Tektronix.SpectrumTraces SpectrumTrace1 = 0 : Public, Static, Literal, HasDefault
+    Tektronix.SpectrumTraces SpectrumTrace2 = 1 : Public, Static, Literal, HasDefault
+    Tektronix.SpectrumTraces SpectrumTrace3 = 2 : Public, Static, Literal, HasDefault
+Struct Tektronix.SpectrumDetectors: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    Tektronix.SpectrumDetectors PosPeak = 0 : Public, Static, Literal, HasDefault
+    Tektronix.SpectrumDetectors NegPeak = 1 : Public, Static, Literal, HasDefault
+    Tektronix.SpectrumDetectors Average = 2 : Public, Static, Literal, HasDefault
+    Tektronix.SpectrumDetectors Sample = 3 : Public, Static, Literal, HasDefault
+Struct Tektronix.SpectrumVerticalUnits: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    Tektronix.SpectrumVerticalUnits SpectrumVerticalUnit_dBm = 0 : Public, Static, Literal, HasDefault
+    Tektronix.SpectrumVerticalUnits SpectrumVerticalUnit_Watt = 1 : Public, Static, Literal, HasDefault
+    Tektronix.SpectrumVerticalUnits SpectrumVerticalUnit_Volt = 2 : Public, Static, Literal, HasDefault
+    Tektronix.SpectrumVerticalUnits SpectrumVerticalUnit_Amp = 3 : Public, Static, Literal, HasDefault
+    Tektronix.SpectrumVerticalUnits SpectrumVerticalUnit_dBmV = 4 : Public, Static, Literal, HasDefault
+Struct Tektronix.TriggerMode: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    Tektronix.TriggerMode freeRun = 0 : Public, Static, Literal, HasDefault
+    Tektronix.TriggerMode triggered = 1 : Public, Static, Literal, HasDefault
+Struct Tektronix.TriggerSource: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    Tektronix.TriggerSource TriggerSourceExternal = 0 : Public, Static, Literal, HasDefault
+    Tektronix.TriggerSource TriggerSourceIFPowerLevel = 1 : Public, Static, Literal, HasDefault
+Struct Tektronix.TriggerTransition: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    Tektronix.TriggerTransition TriggerTransitionLH = 1 : Public, Static, Literal, HasDefault
+    Tektronix.TriggerTransition TriggerTransitionHL = 2 : Public, Static, Literal, HasDefault
+    Tektronix.TriggerTransition TriggerTransitionEither = 3 : Public, Static, Literal, HasDefault
+Struct Tektronix.REFTIME_SRC: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    Tektronix.REFTIME_SRC RTSRC_NONE = 0 : Public, Static, Literal, HasDefault
+    Tektronix.REFTIME_SRC RTSRC_SYSTEM = 1 : Public, Static, Literal, HasDefault
+    Tektronix.REFTIME_SRC RTSRC_GNSS = 2 : Public, Static, Literal, HasDefault
+    Tektronix.REFTIME_SRC RTSRC_USER = 3 : Public, Static, Literal, HasDefault
+Struct Tektronix.FREQREF_SOURCE: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    Tektronix.FREQREF_SOURCE FRS_INTERNAL = 0 : Public, Static, Literal, HasDefault
+    Tektronix.FREQREF_SOURCE FRS_EXTREF = 1 : Public, Static, Literal, HasDefault
+    Tektronix.FREQREF_SOURCE FRS_GNSS = 2 : Public, Static, Literal, HasDefault
+    Tektronix.FREQREF_SOURCE FRS_USER = 3 : Public, Static, Literal, HasDefault
+Struct Tektronix.GFR_MODE: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    Tektronix.GFR_MODE GFRM_OFF = 0 : Public, Static, Literal, HasDefault
+    Tektronix.GFR_MODE GFRM_FREQTRACK = 2 : Public, Static, Literal, HasDefault
+    Tektronix.GFR_MODE GFRM_PHASETRACK = 3 : Public, Static, Literal, HasDefault
+    Tektronix.GFR_MODE GFRM_HOLD = 4 : Public, Static, Literal, HasDefault
+Struct Tektronix.GFR_STATE: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    Tektronix.GFR_STATE GFRS_OFF = 0 : Public, Static, Literal, HasDefault
+    Tektronix.GFR_STATE GFRS_ACQUIRING = 1 : Public, Static, Literal, HasDefault
+    Tektronix.GFR_STATE GFRS_FREQTRACKING = 2 : Public, Static, Literal, HasDefault
+    Tektronix.GFR_STATE GFRS_PHASETRACKING = 3 : Public, Static, Literal, HasDefault
+    Tektronix.GFR_STATE GFRS_HOLDING = 4 : Public, Static, Literal, HasDefault
+Struct Tektronix.GFR_QUALITY: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    Tektronix.GFR_QUALITY GFRQ_INVALID = 0 : Public, Static, Literal, HasDefault
+    Tektronix.GFR_QUALITY GFRQ_LOW = 1 : Public, Static, Literal, HasDefault
+    Tektronix.GFR_QUALITY GFRQ_MEDIUM = 2 : Public, Static, Literal, HasDefault
+    Tektronix.GFR_QUALITY GFRQ_HIGH = 3 : Public, Static, Literal, HasDefault
+Struct Tektronix.ReturnStatus: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    Tektronix.ReturnStatus noError = 0 : Public, Static, Literal, HasDefault
+    Tektronix.ReturnStatus errorNotConnected = 101 : Public, Static, Literal, HasDefault
+    Tektronix.ReturnStatus errorIncompatibleFirmware = 102 : Public, Static, Literal, HasDefault
+    Tektronix.ReturnStatus errorBootLoaderNotRunning = 103 : Public, Static, Literal, HasDefault
+    Tektronix.ReturnStatus errorTooManyBootLoadersConnected = 104 : Public, Static, Literal, HasDefault
+    Tektronix.ReturnStatus errorRebootFailure = 105 : Public, Static, Literal, HasDefault
+    Tektronix.ReturnStatus errorGNSSNotInstalled = 106 : Public, Static, Literal, HasDefault
+    Tektronix.ReturnStatus errorGNSSNotEnabled = 107 : Public, Static, Literal, HasDefault
+    Tektronix.ReturnStatus errorPOSTFailureFPGALoad = 201 : Public, Static, Literal, HasDefault
+    Tektronix.ReturnStatus errorPOSTFailureHiPower = 202 : Public, Static, Literal, HasDefault
+    Tektronix.ReturnStatus errorPOSTFailureI2C = 203 : Public, Static, Literal, HasDefault
+    Tektronix.ReturnStatus errorPOSTFailureGPIF = 204 : Public, Static, Literal, HasDefault
+    Tektronix.ReturnStatus errorPOSTFailureUsbSpeed = 205 : Public, Static, Literal, HasDefault
+    Tektronix.ReturnStatus errorPOSTDiagFailure = 206 : Public, Static, Literal, HasDefault
+    Tektronix.ReturnStatus errorPOSTFailure3P3VSense = 207 : Public, Static, Literal, HasDefault
+    Tektronix.ReturnStatus errorBufferAllocFailed = 301 : Public, Static, Literal, HasDefault
+    Tektronix.ReturnStatus errorParameter = 302 : Public, Static, Literal, HasDefault
+    Tektronix.ReturnStatus errorDataNotReady = 303 : Public, Static, Literal, HasDefault
+    Tektronix.ReturnStatus errorParameterTraceLength = 1101 : Public, Static, Literal, HasDefault
+    Tektronix.ReturnStatus errorMeasurementNotEnabled = 1102 : Public, Static, Literal, HasDefault
+    Tektronix.ReturnStatus errorSpanIsLessThanRBW = 1103 : Public, Static, Literal, HasDefault
+    Tektronix.ReturnStatus errorFrequencyOutOfRange = 1104 : Public, Static, Literal, HasDefault
+    Tektronix.ReturnStatus errorStreamADCToDiskFileOpen = 1201 : Public, Static, Literal, HasDefault
+    Tektronix.ReturnStatus errorStreamADCToDiskAlreadyStreaming = 1202 : Public, Static, Literal, HasDefault
+    Tektronix.ReturnStatus errorStreamADCToDiskBadPath = 1203 : Public, Static, Literal, HasDefault
+    Tektronix.ReturnStatus errorStreamADCToDiskThreadFailure = 1204 : Public, Static, Literal, HasDefault
+    Tektronix.ReturnStatus errorStreamedFileInvalidHeader = 1205 : Public, Static, Literal, HasDefault
+    Tektronix.ReturnStatus errorStreamedFileOpenFailure = 1206 : Public, Static, Literal, HasDefault
+    Tektronix.ReturnStatus errorStreamingOperationNotSupported = 1207 : Public, Static, Literal, HasDefault
+    Tektronix.ReturnStatus errorStreamingFastForwardTimeInvalid = 1208 : Public, Static, Literal, HasDefault
+    Tektronix.ReturnStatus errorStreamingInvalidParameters = 1209 : Public, Static, Literal, HasDefault
+    Tektronix.ReturnStatus errorStreamingEOF = 1210 : Public, Static, Literal, HasDefault
+    Tektronix.ReturnStatus errorIQStreamInvalidFileDataType = 1301 : Public, Static, Literal, HasDefault
+    Tektronix.ReturnStatus errorIQStreamFileOpenFailed = 1302 : Public, Static, Literal, HasDefault
+    Tektronix.ReturnStatus errorIQStreamBandwidthOutOfRange = 1303 : Public, Static, Literal, HasDefault
+    Tektronix.ReturnStatus errorTimeout = 3001 : Public, Static, Literal, HasDefault
+    Tektronix.ReturnStatus errorTransfer = 3002 : Public, Static, Literal, HasDefault
+    Tektronix.ReturnStatus errorFileOpen = 3003 : Public, Static, Literal, HasDefault
+    Tektronix.ReturnStatus errorFailed = 3004 : Public, Static, Literal, HasDefault
+    Tektronix.ReturnStatus errorCRC = 3005 : Public, Static, Literal, HasDefault
+    Tektronix.ReturnStatus errorChangeToFlashMode = 3006 : Public, Static, Literal, HasDefault
+    Tektronix.ReturnStatus errorChangeToRunMode = 3007 : Public, Static, Literal, HasDefault
+    Tektronix.ReturnStatus errorDSPLError = 3008 : Public, Static, Literal, HasDefault
+    Tektronix.ReturnStatus errorLOLockFailure = 3009 : Public, Static, Literal, HasDefault
+    Tektronix.ReturnStatus errorExternalReferenceNotEnabled = 3010 : Public, Static, Literal, HasDefault
+    Tektronix.ReturnStatus errorLogFailure = 3011 : Public, Static, Literal, HasDefault
+    Tektronix.ReturnStatus errorRegisterIO = 3012 : Public, Static, Literal, HasDefault
+    Tektronix.ReturnStatus errorFileRead = 3013 : Public, Static, Literal, HasDefault
+    Tektronix.ReturnStatus errorConsumerNotActive = 3014 : Public, Static, Literal, HasDefault
+    Tektronix.ReturnStatus errorDisconnectedDeviceRemoved = 3101 : Public, Static, Literal, HasDefault
+    Tektronix.ReturnStatus errorDisconnectedDeviceNodeChangedAndRemoved = 3102 : Public, Static, Literal, HasDefault
+    Tektronix.ReturnStatus errorDisconnectedTimeoutWaitingForADcData = 3103 : Public, Static, Literal, HasDefault
+    Tektronix.ReturnStatus errorDisconnectedIOBeginTransfer = 3104 : Public, Static, Literal, HasDefault
+    Tektronix.ReturnStatus errorOperationNotSupportedInSimMode = 3105 : Public, Static, Literal, HasDefault
+    Tektronix.ReturnStatus errorFPGAConfigureFailure = 3201 : Public, Static, Literal, HasDefault
+    Tektronix.ReturnStatus errorCalCWNormFailure = 3202 : Public, Static, Literal, HasDefault
+    Tektronix.ReturnStatus errorSystemAppDataDirectory = 3203 : Public, Static, Literal, HasDefault
+    Tektronix.ReturnStatus errorFileCreateMRU = 3204 : Public, Static, Literal, HasDefault
+    Tektronix.ReturnStatus errorDeleteUnsuitableCachePath = 3205 : Public, Static, Literal, HasDefault
+    Tektronix.ReturnStatus errorUnableToSetFilePermissions = 3206 : Public, Static, Literal, HasDefault
+    Tektronix.ReturnStatus errorCreateCachePath = 3207 : Public, Static, Literal, HasDefault
+    Tektronix.ReturnStatus errorCreateCachePathBoost = 3208 : Public, Static, Literal, HasDefault
+    Tektronix.ReturnStatus errorCreateCachePathStd = 3209 : Public, Static, Literal, HasDefault
+    Tektronix.ReturnStatus errorCreateCachePathGen = 3210 : Public, Static, Literal, HasDefault
+    Tektronix.ReturnStatus errorBufferLengthTooSmall = 3211 : Public, Static, Literal, HasDefault
+    Tektronix.ReturnStatus errorRemoveCachePath = 3212 : Public, Static, Literal, HasDefault
+    Tektronix.ReturnStatus errorGetCachingDirectoryBoost = 3213 : Public, Static, Literal, HasDefault
+    Tektronix.ReturnStatus errorGetCachingDirectoryStd = 3214 : Public, Static, Literal, HasDefault
+    Tektronix.ReturnStatus errorGetCachingDirectoryGen = 3215 : Public, Static, Literal, HasDefault
+    Tektronix.ReturnStatus errorInconsistentFileSystem = 3216 : Public, Static, Literal, HasDefault
+    Tektronix.ReturnStatus errorWriteCalConfigHeader = 3301 : Public, Static, Literal, HasDefault
+    Tektronix.ReturnStatus errorWriteCalConfigData = 3302 : Public, Static, Literal, HasDefault
+    Tektronix.ReturnStatus errorReadCalConfigHeader = 3303 : Public, Static, Literal, HasDefault
+    Tektronix.ReturnStatus errorReadCalConfigData = 3304 : Public, Static, Literal, HasDefault
+    Tektronix.ReturnStatus errorEraseCalConfig = 3305 : Public, Static, Literal, HasDefault
+    Tektronix.ReturnStatus errorCalConfigFileSize = 3306 : Public, Static, Literal, HasDefault
+    Tektronix.ReturnStatus errorInvalidCalibConstantFileFormat = 3307 : Public, Static, Literal, HasDefault
+    Tektronix.ReturnStatus errorMismatchCalibConstantsSize = 3308 : Public, Static, Literal, HasDefault
+    Tektronix.ReturnStatus errorCalConfigInvalid = 3309 : Public, Static, Literal, HasDefault
+    Tektronix.ReturnStatus errorFlashFileSystemUnexpectedSize = 3401 : Public, Static, Literal, HasDefault
+    Tektronix.ReturnStatus errorFlashFileSystemNotMounted = 3402 : Public, Static, Literal, HasDefault
+    Tektronix.ReturnStatus errorFlashFileSystemOutOfRange = 3403 : Public, Static, Literal, HasDefault
+    Tektronix.ReturnStatus errorFlashFileSystemIndexNotFound = 3404 : Public, Static, Literal, HasDefault
+    Tektronix.ReturnStatus errorFlashFileSystemReadErrorCRC = 3405 : Public, Static, Literal, HasDefault
+    Tektronix.ReturnStatus errorFlashFileSystemReadFileMissing = 3406 : Public, Static, Literal, HasDefault
+    Tektronix.ReturnStatus errorFlashFileSystemCreateCacheIndex = 3407 : Public, Static, Literal, HasDefault
+    Tektronix.ReturnStatus errorFlashFileSystemCreateCachedDataFile = 3408 : Public, Static, Literal, HasDefault
+    Tektronix.ReturnStatus errorFlashFileSystemUnsupportedFileSize = 3409 : Public, Static, Literal, HasDefault
+    Tektronix.ReturnStatus errorFlashFileSystemInsufficentSpace = 3410 : Public, Static, Literal, HasDefault
+    Tektronix.ReturnStatus errorFlashFileSystemInconsistentState = 3411 : Public, Static, Literal, HasDefault
+    Tektronix.ReturnStatus errorFlashFileSystemTooManyFiles = 3412 : Public, Static, Literal, HasDefault
+    Tektronix.ReturnStatus errorFlashFileSystemImportFileNotFound = 3413 : Public, Static, Literal, HasDefault
+    Tektronix.ReturnStatus errorFlashFileSystemImportFileReadError = 3414 : Public, Static, Literal, HasDefault
+    Tektronix.ReturnStatus errorFlashFileSystemImportFileError = 3415 : Public, Static, Literal, HasDefault
+    Tektronix.ReturnStatus errorFlashFileSystemFileNotFoundError = 3416 : Public, Static, Literal, HasDefault
+    Tektronix.ReturnStatus errorFlashFileSystemReadBufferTooSmall = 3417 : Public, Static, Literal, HasDefault
+    Tektronix.ReturnStatus errorFlashWriteFailure = 3418 : Public, Static, Literal, HasDefault
+    Tektronix.ReturnStatus errorFlashReadFailure = 3419 : Public, Static, Literal, HasDefault
+    Tektronix.ReturnStatus errorFlashFileSystemBadArgument = 3420 : Public, Static, Literal, HasDefault
+    Tektronix.ReturnStatus errorFlashFileSystemCreateFile = 3421 : Public, Static, Literal, HasDefault
+    Tektronix.ReturnStatus errorMonitoringNotSupported = 3501 : Public, Static, Literal, HasDefault
+    Tektronix.ReturnStatus errorAuxDataNotAvailable = 3502 : Public, Static, Literal, HasDefault
+    Tektronix.ReturnStatus errorBatteryCommFailure = 3601 : Public, Static, Literal, HasDefault
+    Tektronix.ReturnStatus errorBatteryChargerCommFailure = 3602 : Public, Static, Literal, HasDefault
+    Tektronix.ReturnStatus errorBatteryNotPresent = 3603 : Public, Static, Literal, HasDefault
+    Tektronix.ReturnStatus errorESTOutputPathFile = 3701 : Public, Static, Literal, HasDefault
+    Tektronix.ReturnStatus errorESTPathNotDirectory = 3702 : Public, Static, Literal, HasDefault
+    Tektronix.ReturnStatus errorESTPathDoesntExist = 3703 : Public, Static, Literal, HasDefault
+    Tektronix.ReturnStatus errorESTUnableToOpenLog = 3704 : Public, Static, Literal, HasDefault
+    Tektronix.ReturnStatus errorESTUnableToOpenLimits = 3705 : Public, Static, Literal, HasDefault
+    Tektronix.ReturnStatus errorRevisionDataNotFound = 3801 : Public, Static, Literal, HasDefault
+    Tektronix.ReturnStatus error112MHzAlignmentSignalLevelTooLow = 3901 : Public, Static, Literal, HasDefault
+    Tektronix.ReturnStatus error10MHzAlignmentSignalLevelTooLow = 3902 : Public, Static, Literal, HasDefault
+    Tektronix.ReturnStatus errorInvalidCalConstant = 3903 : Public, Static, Literal, HasDefault
+    Tektronix.ReturnStatus errorNormalizationCacheInvalid = 3904 : Public, Static, Literal, HasDefault
+    Tektronix.ReturnStatus errorInvalidAlignmentCache = 3905 : Public, Static, Literal, HasDefault
+    Tektronix.ReturnStatus errorLockExtRefAfterAlignment = 3906 : Public, Static, Literal, HasDefault
+    Tektronix.ReturnStatus errorTriggerSystem = 4000 : Public, Static, Literal, HasDefault
+    Tektronix.ReturnStatus errorVNAUnsupportedConfiguration = 4100 : Public, Static, Literal, HasDefault
+    Tektronix.ReturnStatus errorADCOverrange = 9000 : Public, Static, Literal, HasDefault
+    Tektronix.ReturnStatus errorOscUnlock = 9001 : Public, Static, Literal, HasDefault
+    Tektronix.ReturnStatus errorNotSupported = 9901 : Public, Static, Literal, HasDefault
+    Tektronix.ReturnStatus errorPlaceholder = 9999 : Public, Static, Literal, HasDefault
+    Tektronix.ReturnStatus notImplemented = -1 : Public, Static, Literal, HasDefault
