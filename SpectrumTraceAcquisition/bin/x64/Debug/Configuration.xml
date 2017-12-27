@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Configuration>
+  <Measurements>
+    <Measurement>
+      <EnableVBW>false</EnableVBW>
+      <EnableExternalFrequencyRefererence>false</EnableExternalFrequencyRefererence>
+      <DetectorType>AVERAGE</DetectorType>
+      <WindowType>FLATTOP</WindowType>
+      <SpectrumTraceNumber>TRACE1</SpectrumTraceNumber>
+      <VerticalUnits>dBM</VerticalUnits>
+      <NumberOfTraces>1</NumberOfTraces>
+      <TraceLength>4096</TraceLength>
+      <CenterFrequency>120000000</CenterFrequency>
+      <Span>40000000</Span>
+      <RBW>1000000</RBW>
+      <VBW>50000000</VBW>
+      <ReferenceLevel>-10</ReferenceLevel>
+    </Measurement>
+  </Measurements>
+</Configuration>
