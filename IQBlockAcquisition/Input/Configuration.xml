@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Configuration>
+  <Measurements>
+    <Measurement>
+      <EnableExternalFrequencyRefererence>false</EnableExternalFrequencyRefererence>
+      <DetectorType>AVERAGE</DetectorType>
+      <WindowType>FLATTOP</WindowType>
+      <SpectrumTraceNumber>TRACE1</SpectrumTraceNumber>
+      <VerticalUnits>dBM</VerticalUnits>
+      <NumberOfAcquisitions>1</NumberOfAcquisitions>
+      <RecordLength>4096</RecordLength>
+      <CenterFrequency>120000000</CenterFrequency>
+      <IQBandwidth>20000000</IQBandwidth>
+      <ReferenceLevel>-10</ReferenceLevel>
+      <TriggerPosition>-10</TriggerPosition>
+    </Measurement>
+  </Measurements>
+</Configuration>
